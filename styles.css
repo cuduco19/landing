@@ -69,7 +69,7 @@ body {
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.25;
+    gap: 1.25rem;
     align-items: center;
 }
 
@@ -81,6 +81,11 @@ body {
     margin: 0 0 1rem;
     color: var(--muted);
 }
+
+.hero-graphic {
+    width: 100%;
+}
+
 
 /* CTA (Call To Action) styles*/
 .btn {
@@ -129,7 +134,7 @@ body {
 }
 
 /* Larger screens*/
-@media(min-width: 720px){
+@media(min-width: 785px){
     .hero-grid {
         grid-template-columns: 1fr 420px;
         gap: 2rem;
