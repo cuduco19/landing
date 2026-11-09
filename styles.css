@@ -95,12 +95,21 @@ body {
 
 
 /* CTA (Call To Action) styles*/
+
+.hero-copy .cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Small gap between buttons */
+}
+
 .btn {
     display: inline-block;
     padding: 0.65rem 1.25rem; /* 🚀 OPTIMIZATION: Added slightly wider padding to balance wide font */
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    text-align: center;  
+    line-height: 1.2; /* 🛠️ Add this to clamp the box and balance the text */  
 }
 
 .btn.primary {
@@ -112,7 +121,7 @@ body {
     border: 1px solid rgba(2, 6, 23, 0.06);
     color: var(--text);
     background: transparent;
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
 }
 
 /* Cards */
@@ -128,8 +137,8 @@ body {
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -138,6 +147,7 @@ body {
     padding: 1.5rem; /* 🚀 OPTIMIZATION: Increased internal card padding to match wider text layout */
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+    flex: 1 1 250px; /* Grow, shrink, and base-basis sizing */
 }
 
 /* Footer */
@@ -158,9 +168,15 @@ body {
         font-size: 2.2rem; /* 🚀 OPTIMIZATION: Bumped up desktop base scale */
     }
 
+    /* Larger screen: Spread out horizontally on wide viewports */
+    .hero-copy .cta {
+        flex-direction: row; /* Buttons sit side-by-side on larger screens */
+        align-items: center;
+    }    
+
+    /* Flex gap expansion for cards on desktop layout */
     .cards {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem; /* 🚀 OPTIMIZATION: Increased grid gap slightly for card breathing room */
+        gap: 1.25rem; 
     }
 }
 
