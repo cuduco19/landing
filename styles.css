@@ -17,10 +17,11 @@ html, body {
 
 body {
     margin: 0;
-    font-family: "Inter", system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    font-family: "Poppins", system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
     color: var(--text);
     background: var(--bg);
-    line-height: 1.45;
+    /* 🚀 OPTIMIZATION: Increased from 1.45 to 1.6 for Poppins body readability */
+    line-height: 1.6; 
 }
 
 /* Utility container */
@@ -49,6 +50,8 @@ body {
 
 .brand {
     font-weight: 700;
+    /* 🚀 OPTIMIZATION: Slight letter tightening for branding */
+    letter-spacing: -0.01em; 
 }
 
 .nav a {
@@ -56,6 +59,7 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95rem; /* 🚀 OPTIMIZATION: Scaled slightly down due to Poppins width */
 }
 .nav a:hover {
     color: var(--text);
@@ -63,7 +67,7 @@ body {
 
 /* Hero */
 .hero {
-    padding: 2rem 0;
+     padding: 2.5rem 0; /* 🚀 OPTIMIZATION: Slightly increased vertical breathing room */
 }
 
 .hero-grid {
@@ -74,11 +78,14 @@ body {
 }
 
 .hero-copy h1 {
-    margin: 0 0 2rem;
+    /* 🚀 OPTIMIZATION: Tighter margin, line-height, and negative tracking */
+    margin: 0 0 1rem; 
+    line-height: 1.25;
+    letter-spacing: -0.02em;
 }
 
 .hero-copy p {
-    margin: 0 0 1rem;
+    margin: 0 0 1.5rem; /* 🚀 OPTIMIZATION: Balanced gap before the CTA buttons */
     color: var(--muted);
 }
 
@@ -90,7 +97,7 @@ body {
 /* CTA (Call To Action) styles*/
 .btn {
     display: inline-block;
-    padding: 0.6rem 1rem;
+    padding: 0.65rem 1.25rem; /* 🚀 OPTIMIZATION: Added slightly wider padding to balance wide font */
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -113,6 +120,13 @@ body {
     padding: 2rem 0;
 }
 
+/* 🚀 OPTIMIZATION: Cleaned up heading spacing inside card blocks */
+.features h2, .contact h2 {
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+}
+
 .cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -121,7 +135,7 @@ body {
 
 .card {
     background: var(--card);
-    padding: 1rem;
+    padding: 1.5rem; /* 🚀 OPTIMIZATION: Increased internal card padding to match wider text layout */
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(2,6,23,0.04);
 }
@@ -136,22 +150,23 @@ body {
 /* Larger screens*/
 @media(min-width: 785px){
     .hero-grid {
-        grid-template-columns: 1fr 420px;
+        grid-template-columns: 1fr 400px;
         gap: 2rem;
     }
 
-    .hero-copy h1{
-        font-size: 2rem;
+     .hero-copy h1{
+        font-size: 2.2rem; /* 🚀 OPTIMIZATION: Bumped up desktop base scale */
     }
 
     .cards {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem; /* 🚀 OPTIMIZATION: Increased grid gap slightly for card breathing room */
     }
 }
 
 /* Very large */
 @media(min-width: 1100px){
     .hero-copy h1 {
-        font-size: 2.4rem;
+        font-size: 2.75rem; /* 🚀 OPTIMIZATION: More impactful hero header size for large displays */
     }
 }
