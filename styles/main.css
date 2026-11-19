@@ -4,7 +4,7 @@
     --card: #ffffff;
     --text: #0f172a;
     --muted: #6b7280;
-    --accent: #0284c7;
+    --accent: #0369a1; /* 5.94:1 contrast with white text — passes WCAG AA */
     --container: 1100px;
 }
 
