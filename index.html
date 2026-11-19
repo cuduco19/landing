@@ -4,10 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Service Landing</title>
-        <!-- Google Font -->
+        <meta name="description" content="Launch beautiful, responsive, and accessible websites without the headache. Templates, tools, and workflows by EvanCru Studio.">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
-        <!-- Stylesheet -->
-         <link rel="stylesheet" href="dist/styles/main.min.css">
+
+        <link rel="stylesheet" href="styles/main.css">
     </head> 
     <body>                
         <header class="site-header">
@@ -15,7 +18,6 @@
                 <div class="brand">EvanCru Studio</div>
                 <nav class="nav">
                     <a href="#feature">Features</a>
-                    <a href="#pricing">Pricing</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
@@ -25,7 +27,7 @@
                 <div class="container hero-grid">
                     <div class="hero-copy">
                         <h1>Build Modern Websites – Faster</h1>
-                        <p>Launch beautiful, responsive sites without the headche. Templates, tools, and workflow to get you going.</p>
+                        <p>Launch beautiful, responsive sites without the headache. Templates, tools, and workflow to get you going.</p>
                         <div class="cta">
                             <a class="btn primary" href="#signup">Get Started</a>
                             <a class="btn ghost" href="#learn">Learn more</a>
@@ -33,7 +35,15 @@
                     </div>
                     <div class="hero-media" aria-hidden="true">
                         <div class="mockup">
-                            <img src="assets/gospel-with-legs.jpeg" alt="Gospel with legs image" class="hero-graphic" width="100px" />
+                            <img 
+                            src="assets/images/gospel-with-legs.webp" 
+                            alt="Website template preview" 
+                            class="hero-graphic" 
+                            width="1408" 
+                            height="678" 
+                            fetchpriority="high"
+                            decoding="async"
+                        >
                         </div>
                     </div>  
                 </div>
@@ -47,11 +57,11 @@
                     </div>
                     <div class="card">
                         <h3>Responsive</h3>
-                        <p>Works on phones, tablets, and deck-tops.</p>
+                        <p>Works on phones, tablets, and desktops.</p>
                     </div>
                     <div class="card">
                         <h3>Accessible</h3>
-                        <p>Built with accesability in mind.</p>
+                        <p>Built with accessibility in mind.</p>
                     </div>
                 </div>
             </section>
@@ -62,7 +72,7 @@
         </main>
         <footer class="site-footer">
             <div class="container">
-                <p>&copy;2026 EvanCru Studio</p>
+                <p>&copy; 2026 EvanCru Studio</p>
             </div>
         </footer>
     </body>
