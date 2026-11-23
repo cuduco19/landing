@@ -5,6 +5,7 @@
     --text: #0f172a;
     --muted: #6b7280;
     --accent: #0369a1; /* 5.94:1 contrast with white text — passes WCAG AA */
+    --secondary: #6c757d;
     --container: 1100px;
 }
 
@@ -61,6 +62,7 @@ body {
 
 .brand {
     font-weight: 700;
+    font-size: 1.2rem;
     /* 🚀 OPTIMIZATION: Slight letter tightening for branding */
     letter-spacing: -0.01em; 
 }
@@ -70,7 +72,7 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem; /* 🚀 OPTIMIZATION: Scaled slightly down due to Poppins width */
+    font-size: 1rem;
 }
 .nav a:hover {
     color: var(--text);
@@ -91,12 +93,14 @@ body {
 .hero-copy h1 {
     /* 🚀 OPTIMIZATION: Tighter margin, line-height, and negative tracking */
     margin: 0 0 1rem; 
+    font-size: 2.1rem;
     line-height: 1.25;
     letter-spacing: -0.02em;
 }
 
 .hero-copy p {
     margin: 0 0 1.5rem; /* 🚀 OPTIMIZATION: Balanced gap before the CTA buttons */
+    font-size: 1.2rem; /* Matches Bootstrap .lead scale */
     color: var(--muted);
 }
 
@@ -119,19 +123,32 @@ body {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.05rem;
     text-align: center;  
     line-height: 1.2; /* 🛠️ Add this to clamp the box and balance the text */  
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .btn.primary {
     background: var(--accent);
+    border: 1px solid var(--accent);
     color: white;
 }
 
+.btn.primary:hover {
+    background: #025481;
+    border-color: #025481;
+}
+
 .btn.ghost {
-    border: 1px solid rgba(2, 6, 23, 0.06);
-    color: var(--text);
+    border: 1px solid var(--secondary); /* Stronger visible border like Bootstrap outline button */
+    color: var(--secondary);
     background: transparent;
+}
+
+.btn.ghost:hover {
+    background: var(--secondary);
+    color: white;
 }
 
 /* Cards */
@@ -141,6 +158,7 @@ body {
 
 /* 🚀 OPTIMIZATION: Cleaned up heading spacing inside card blocks */
 .features h2, .contact h2 {
+    font-size: 1.85rem;
     line-height: 1.25;
     letter-spacing: -0.01em;
     margin-bottom: 1.5rem;
@@ -160,6 +178,36 @@ body {
     flex: 1 1 250px; /* Grow, shrink, and base-basis sizing */
 }
 
+.card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--muted);
+}
+
+/* Contact */
+.contact {
+    padding: 2rem 0;
+}
+
+.contact p {
+    font-size: 1.1rem;
+}
+
+.contact a {
+    color: var(--accent);
+    text-decoration: none; /* Removes underline like Bootstrap */
+    font-weight: 600;
+}
+
+.contact a:hover {
+    color: #025481;
+}
+
 /* Footer */
 .site-footer {
     padding: 1.25rem 0;
@@ -175,7 +223,7 @@ body {
     }
 
     .hero-copy h1 {
-        font-size: 2.2rem; /* 🚀 OPTIMIZATION: Bumped up desktop base scale */
+        font-size: 2.5rem; /* 🚀 OPTIMIZATION: Bumped up desktop base scale */
     }
 
     /* Larger screen: Spread out horizontally on wide viewports */
@@ -193,6 +241,6 @@ body {
 /* Very large */
 @media(min-width: 1100px){
     .hero-copy h1 {
-        font-size: 2.75rem; /* 🚀 OPTIMIZATION: More impactful hero header size for large displays */
+        font-size: 3rem; /* 🚀 OPTIMIZATION: More impactful hero header size for large displays */
     }
 }
